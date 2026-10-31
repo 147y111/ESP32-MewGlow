@@ -1,4 +1,4 @@
-# ESP32 Cat Car
+# ESP32 MewGlow
 
 **Platform:** ESP32 · **Development Environment:** Arduino IDE · **Language:** Arduino/C++
 
