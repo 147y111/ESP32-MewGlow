@@ -16,6 +16,17 @@ The ESP32 runs a local HTTP server with three endpoints. `GET /ping` verifies th
 
 The hardware uses an ESP32, an ILI9341 TFT display, a PIR motion sensor, a TB6612FNG dual-motor driver, two motors, and red, yellow, green, blue, and white LEDs. The firmware demonstrates Wi-Fi networking, HTTP request handling, JSON parsing, PWM output, RGB-to-five-channel color conversion, display graphics, non-blocking eye animation, sensor input, motor control, and automatic Wi-Fi reconnection.
 
+The completed hardware prototype is shown below. The background face has been anonymized for privacy.
+
+![Completed MewGlow hardware prototype](media/mewglow-hardware-prototype-anonymized.png)
+
+Short subsystem demonstrations:
+
+- [Watch the LED breathing-effect test](media/led-breathing-effect-test.mp4)
+- [Watch the wheel-motion test](media/wheel-motion-test.mp4)
+
+These clips document the lighting and motor subsystems separately; a full video of the assembled robot operating was not recorded.
+
 The current firmware can connect to a local Wi-Fi network, receive app commands, update its face and lighting, and react to nearby activity. Repeated PIR triggers are interpreted as a wave, while ordinary motion starts a mood-based movement sequence. Multiple recent triggers activate a more curious response. The robot can also provide non-blocking visual feedback through a physical reply button on GPIO 39 and perform a small idle fidget after five minutes without activity.
 
 ![MewGlow profile and settings screen](images/mewglow-profile.png)
