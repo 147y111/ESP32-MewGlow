@@ -947,6 +947,14 @@ void updateButton() {
 // HTTP API
 // ==================================================
 
+void handlePing() {
+  server.send(
+    200,
+    "text/plain",
+    "pong"
+  );
+}
+
 void handleStatus() {
   StaticJsonDocument<256> doc;
 
@@ -1219,6 +1227,12 @@ void setup() {
   }
 
   // HTTP API
+  server.on(
+    "/ping",
+    HTTP_GET,
+    handlePing
+  );
+
   server.on(
     "/status",
     HTTP_GET,
