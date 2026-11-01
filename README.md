@@ -16,10 +16,6 @@ The ESP32 runs a local HTTP server with three endpoints. `GET /ping` verifies th
 
 The hardware uses an ESP32, an ILI9341 TFT display, a PIR motion sensor, a TB6612FNG dual-motor driver, two motors, and red, yellow, green, blue, and white LEDs. The firmware demonstrates Wi-Fi networking, HTTP request handling, JSON parsing, PWM output, RGB-to-five-channel color conversion, display graphics, non-blocking eye animation, sensor input, motor control, and automatic Wi-Fi reconnection.
 
-The completed hardware prototype is shown below. The background face has been anonymized for privacy.
-
-![Completed MewGlow hardware prototype](media/mewglow-hardware-prototype-anonymized.png)
-
 Short subsystem demonstrations:
 
 - [Watch the LED breathing-effect test](media/led-breathing-effect-test.mp4)
@@ -54,3 +50,7 @@ Main wiring:
 | PIR sensor | 34 |
 | Physical reply button | 39 |
 | ILI9341 display | CS 21, DC 25, MOSI 5, SCLK 18, RST 33 |
+
+The completed MewGlow hardware prototype is shown below. The surrounding background has been blurred to protect the privacy of people in the original photograph.
+
+![Completed MewGlow hardware prototype](media/mewglow-hardware-prototype-anonymized.png)
