@@ -12,6 +12,8 @@ The hardware uses an ESP32, an ILI9341 TFT display, a PIR motion sensor, a TB661
 
 The current firmware can connect to a local Wi-Fi network, receive app commands, update its face and lighting, and react to nearby activity. Repeated PIR triggers are interpreted as a wave, while ordinary motion starts a mood-based movement sequence. Multiple recent triggers activate a more curious response. The robot can also provide non-blocking visual feedback through a physical reply button on GPIO 39 and perform a small idle fidget after five minutes without activity.
 
+The repository also preserves an earlier [Wi-Fi RGB control prototype](versions/wifi_rgb_control_prototype.ino). This smaller program demonstrates the original app-to-ESP32 communication flow, RGB PWM control, lighting effects, mood-command parsing, and compatibility with both ESP32 Arduino Core 2.x and 3.x. It is kept separate from the main firmware because both sketches define their own `setup()` and `loop()` functions.
+
 AI tools were used to assist with parts of the coding process and documentation. The hardware integration, physical testing, troubleshooting, and final behavior were reviewed and refined as part of the project.
 
 Before uploading the firmware, replace `YOUR_WIFI_NAME` and `YOUR_WIFI_PASSWORD` in `MewGlow_firmware.ino` with credentials for the local network. The public repository intentionally contains no real Wi-Fi credentials.
