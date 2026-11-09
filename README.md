@@ -79,12 +79,12 @@ The app-interface images, physical prototype, and subsystem demonstrations are c
 
 ### Subsystem Demonstrations
 
-<table>
-  <tr><th>LED Breathing-Effect Test</th><th>Wheel-Motion Test</th></tr>
-  <tr>
-    <td align="center"><video src="https://github.com/user-attachments/assets/24e2c1ae-0854-4cec-bbbc-85fb8c29c850" controls width="380"></video></td>
-    <td align="center"><video src="https://github.com/user-attachments/assets/a0053f77-e8b9-424d-b193-d262d148ab85" controls width="380"></video></td>
-  </tr>
-</table>
+#### LED Breathing-Effect Test
+
+<video src="https://github.com/user-attachments/assets/24e2c1ae-0854-4cec-bbbc-85fb8c29c850" controls width="620"></video>
+
+#### Wheel-Motion Test
+
+<video src="https://github.com/user-attachments/assets/a0053f77-e8b9-424d-b193-d262d148ab85" controls width="620"></video>
 
 These clips document the lighting and motor subsystems separately; a full video of the assembled robot operating was not recorded.
