@@ -38,25 +38,53 @@ Main wiring:
 | Physical reply button | 39 |
 | ILI9341 display | CS 21, DC 25, MOSI 5, SCLK 18, RST 33 |
 
+## Operating Flow
+
+```mermaid
+flowchart TD
+    A[Power on ESP32] --> B[Connect to the local Wi-Fi network]
+    B --> C[Start the HTTP server and initialize the display, LEDs, PIR sensor, and motors]
+    D[iOS app sends text, emoticon, RGB, brightness, and effect values] --> E[POST /command]
+    E --> F[ESP32 parses the JSON command]
+    F --> G[Update the cat face and message on the TFT display]
+    F --> H[Convert the selected color into five LED channels]
+    H --> I[Run steady, breathing, blink, or heartbeat lighting]
+    F --> J[Select mood-based movement behavior]
+    K[PIR sensor detects nearby motion] --> L{Repeated triggers?}
+    L -->|Ordinary motion| J
+    L -->|Wave or multiple recent triggers| M[Run a more curious response]
+    J --> N[TB6612FNG driver controls both motors]
+    M --> N
+    O[Physical reply button pressed] --> P[Show non-blocking visual feedback]
+```
+
 ## Project Media
 
 The app-interface images, physical prototype, and subsystem demonstrations are collected here so the technical description above remains continuous. The surrounding background of the prototype photograph has been blurred to protect the privacy of people in the original image.
 
 ### iOS Companion App
 
-![MewGlow device connection screen](images/mewglow-device.png)
-
-![MewGlow control screen](images/mewglow-control.png)
-
-![MewGlow profile and settings screen](images/mewglow-profile.png)
+<table>
+  <tr><th>Device Connection</th><th>Control</th><th>Profile and Settings</th></tr>
+  <tr>
+    <td align="center"><img src="images/mewglow-device.png" alt="MewGlow device connection screen" height="320"></td>
+    <td align="center"><img src="images/mewglow-control.png" alt="MewGlow control screen" height="320"></td>
+    <td align="center"><img src="images/mewglow-profile.png" alt="MewGlow profile and settings screen" height="320"></td>
+  </tr>
+</table>
 
 ### Completed Hardware Prototype
 
-![Completed MewGlow hardware prototype](media/mewglow-hardware-prototype-anonymized.png)
+<img src="media/mewglow-hardware-prototype-anonymized.png" alt="Completed MewGlow hardware prototype" width="520">
 
 ### Subsystem Demonstrations
 
-- [Watch the LED breathing-effect test](media/led-breathing-effect-test.mp4)
-- [Watch the wheel-motion test](media/wheel-motion-test.mp4)
+<table>
+  <tr><th>LED Breathing-Effect Test</th><th>Wheel-Motion Test</th></tr>
+  <tr>
+    <td align="center"><video src="media/led-breathing-effect-test.mp4" controls width="380"></video></td>
+    <td align="center"><video src="media/wheel-motion-test.mp4" controls width="380"></video></td>
+  </tr>
+</table>
 
 These clips document the lighting and motor subsystems separately; a full video of the assembled robot operating was not recorded.
