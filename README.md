@@ -82,8 +82,8 @@ The app-interface images, physical prototype, and subsystem demonstrations are c
 <table>
   <tr><th>LED Breathing-Effect Test</th><th>Wheel-Motion Test</th></tr>
   <tr>
-    <td align="center"><video src="media/led-breathing-effect-test.mp4" controls width="380"></video></td>
-    <td align="center"><video src="media/wheel-motion-test.mp4" controls width="380"></video></td>
+    <td align="center"><video src="https://github.com/user-attachments/assets/24e2c1ae-0854-4cec-bbbc-85fb8c29c850" controls width="380"></video></td>
+    <td align="center"><video src="https://github.com/user-attachments/assets/a0053f77-e8b9-424d-b193-d262d148ab85" controls width="380"></video></td>
   </tr>
 </table>
 
